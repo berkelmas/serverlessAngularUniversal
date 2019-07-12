@@ -1,3 +1,11 @@
 <h1>Merhaba Firebase</h1>
 
+<a *ngIf="!loggedInState" routerLink="login">Giriş Sayfasına Git</a>
+<br>
+<a routerLink="register" *ngIf="!loggedInState">Üye Ol</a>
+<button (click)="handleLogout()" *ngIf="loggedInState">Çıkış Yap</button>
+
+<h2>Makaleler</h2>
 <p>{{ items | json }}</p>
+
+<p>{{loggedInState ? "Giris basarili" : "uye girisi yapilmamis..."}}</p>

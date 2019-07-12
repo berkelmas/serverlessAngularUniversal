@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,8 @@ import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
 
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { LoginrequiredpageComponent } from './loginrequiredpage/loginrequiredpage.component';
+import { LoginpageComponent } from './loginpage/loginpage.component';
+import { RegisterpageComponent } from './registerpage/registerpage.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDSvICw3uJVd45aq-SuZDD6_lgZMxCAkgo",
@@ -26,10 +29,13 @@ const firebaseConfig = {
   declarations: [
     AppComponent,
     MainpageComponent,
-    LoginrequiredpageComponent
+    LoginrequiredpageComponent,
+    LoginpageComponent,
+    RegisterpageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
