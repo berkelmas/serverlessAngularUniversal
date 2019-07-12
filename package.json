@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "build": "ng build && npm run build:ssr",
+    "build": "ng build && npm run copy:hosting && npm run build:ssr && npm run build:functions",
+    "copy:hosting": "cp -r ./dist/universalson/* ./public && rm ./public/index.html",
+    "build:functions": "npm run --prefix functions build",
     "build:ssr": "ng run universalson:server && npm run webpack:ssr",
     "webpack:ssr": "webpack --config webpack.server.config.js",
     "serve:ssr": "node dist/universalson-webpack/server.js"
