@@ -1,11 +1,13 @@
 <h1>Merhaba Firebase</h1>
 
-<a *ngIf="!loggedInState" routerLink="login">Giriş Sayfasına Git</a>
-<br>
-<a routerLink="register" *ngIf="!loggedInState">Üye Ol</a>
-<button (click)="handleLogout()" *ngIf="loggedInState">Çıkış Yap</button>
+<div>
+  <button *ngIf="!loggedInState" routerLink="login" mat-stroked-button color="accent">Giriş Sayfasına Git</button>
+  <button routerLink="register" *ngIf="!loggedInState" mat-stroked-button color="accent">Üye Ol</button>
+  <button routerLink="addmakale" *ngIf="loggedInState" mat-flat-button color="primary">Makale Ekle</button>
+  <button (click)="handleLogout()" *ngIf="loggedInState" mat-raised-button color="primary">Çıkış Yap</button>
+</div>
 
 <h2>Makaleler</h2>
-<p>{{ items | json }}</p>
+<p *ngFor="let makale of items; let mIndex = index;">Makale Adı: {{ makale.makale_baslik }}</p>
 
 <p>{{loggedInState ? "Giris basarili" : "uye girisi yapilmamis..."}}</p>

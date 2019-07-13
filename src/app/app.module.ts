@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import { AngularMaterialComponentsModule } from './angularmaterialcomponents.module';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +18,7 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { LoginrequiredpageComponent } from './loginrequiredpage/loginrequiredpage.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { RegisterpageComponent } from './registerpage/registerpage.component';
+import { AddmakalepageComponent } from './addmakalepage/addmakalepage.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDSvICw3uJVd45aq-SuZDD6_lgZMxCAkgo",
@@ -31,15 +36,19 @@ const firebaseConfig = {
     MainpageComponent,
     LoginrequiredpageComponent,
     LoginpageComponent,
-    RegisterpageComponent
+    RegisterpageComponent,
+    AddmakalepageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     FormsModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularMaterialComponentsModule,
+    CKEditorModule
   ],
   providers: [
     AngularFireAuthGuard

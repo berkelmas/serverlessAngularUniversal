@@ -23,6 +23,17 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/addmakalepage/addmakalepage.component.html":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/addmakalepage/addmakalepage.component.html ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<form (submit)=\"handleMakaleSubmit()\" #addMakaleForm=\"ngForm\">\n  <input type=\"text\" name=\"makale_baslik\" placeholder=\"Makale Başlığı\">\n  <input type=\"text\" >\n</form>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/app.component.html":
 /*!**************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/app.component.html ***!
@@ -63,7 +74,7 @@ module.exports = "<p>loginrequiredpage works!</p>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Merhaba Firebase</h1>\n\n<a *ngIf=\"!loggedInState\" routerLink=\"login\">Giriş Sayfasına Git</a>\n<br>\n<a routerLink=\"register\" *ngIf=\"!loggedInState\">Üye Ol</a>\n<button (click)=\"handleLogout()\" *ngIf=\"loggedInState\">Çıkış Yap</button>\n\n<h2>Makaleler</h2>\n<p>{{ items | json }}</p>\n\n<p>{{loggedInState ? \"Giris basarili\" : \"uye girisi yapilmamis...\"}}</p>\n"
+module.exports = "<h1>Merhaba Firebase</h1>\n\n<div>\n  <button *ngIf=\"!loggedInState\" routerLink=\"login\" mat-stroked-button color=\"accent\">Giriş Sayfasına Git</button>\n  <button routerLink=\"register\" *ngIf=\"!loggedInState\" mat-stroked-button color=\"accent\">Üye Ol</button>\n  <button routerLink=\"addmakale\" mat-flat-button color=\"primary\">Makale Ekle</button>\n  <button (click)=\"handleLogout()\" *ngIf=\"loggedInState\" mat-raised-button color=\"primary\">Çıkış Yap</button>\n</div>\n\n<h2>Makaleler</h2>\n<p>{{ items | json }}</p>\n\n<p>{{loggedInState ? \"Giris basarili\" : \"uye girisi yapilmamis...\"}}</p>\n"
 
 /***/ }),
 
@@ -75,6 +86,81 @@ module.exports = "<h1>Merhaba Firebase</h1>\n\n<a *ngIf=\"!loggedInState\" route
 /***/ (function(module, exports) {
 
 module.exports = "<form (submit)=\"handleRegister(registerForm)\" #registerForm=\"ngForm\">\n  <input ngModel type=\"text\" name=\"email\" placeholder=\"Email Adresinizi Girin\">\n  <input ngModel type=\"text\" name=\"password\" placeholder=\"Lütfen Şifrenizi Belirleyin\">\n  <button type=\"submit\">Üye Ol</button>\n</form>\n"
+
+/***/ }),
+
+/***/ "./src/app/addmakalepage/addmakalepage.component.scss":
+/*!************************************************************!*\
+  !*** ./src/app/addmakalepage/addmakalepage.component.scss ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkZG1ha2FsZXBhZ2UvYWRkbWFrYWxlcGFnZS5jb21wb25lbnQuc2NzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/addmakalepage/addmakalepage.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/addmakalepage/addmakalepage.component.ts ***!
+  \**********************************************************/
+/*! exports provided: AddmakalepageComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddmakalepageComponent", function() { return AddmakalepageComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let AddmakalepageComponent = class AddmakalepageComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+    handleMakaleSubmit() {
+        return;
+    }
+};
+AddmakalepageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-addmakalepage',
+        template: __webpack_require__(/*! raw-loader!./addmakalepage.component.html */ "./node_modules/raw-loader/index.js!./src/app/addmakalepage/addmakalepage.component.html"),
+        styles: [__webpack_require__(/*! ./addmakalepage.component.scss */ "./src/app/addmakalepage/addmakalepage.component.scss")]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+], AddmakalepageComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/angularmaterialcomponents.module.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/angularmaterialcomponents.module.ts ***!
+  \*****************************************************/
+/*! exports provided: AngularMaterialComponentsModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AngularMaterialComponentsModule", function() { return AngularMaterialComponentsModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+let AngularMaterialComponentsModule = class AngularMaterialComponentsModule {
+};
+AngularMaterialComponentsModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDatepickerModule"]],
+        exports: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDatepickerModule"]],
+    })
+], AngularMaterialComponentsModule);
+
+
 
 /***/ }),
 
@@ -95,7 +181,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _loginrequiredpage_loginrequiredpage_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./loginrequiredpage/loginrequiredpage.component */ "./src/app/loginrequiredpage/loginrequiredpage.component.ts");
 /* harmony import */ var _loginpage_loginpage_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./loginpage/loginpage.component */ "./src/app/loginpage/loginpage.component.ts");
 /* harmony import */ var _registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./registerpage/registerpage.component */ "./src/app/registerpage/registerpage.component.ts");
-/* harmony import */ var _angular_fire_auth_guard__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/fire/auth-guard */ "./node_modules/@angular/fire/auth-guard/es2015/index.js");
+/* harmony import */ var _addmakalepage_addmakalepage_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./addmakalepage/addmakalepage.component */ "./src/app/addmakalepage/addmakalepage.component.ts");
+/* harmony import */ var _angular_fire_auth_guard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/fire/auth-guard */ "./node_modules/@angular/fire/auth-guard/es2015/index.js");
 
 
 
@@ -104,13 +191,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const redirectUnauthorizedToMain = Object(_angular_fire_auth_guard__WEBPACK_IMPORTED_MODULE_7__["redirectUnauthorizedTo"])(['']);
-const redirectLoggedInToMain = Object(_angular_fire_auth_guard__WEBPACK_IMPORTED_MODULE_7__["redirectLoggedInTo"])(['']);
+
+const redirectUnauthorizedToMain = Object(_angular_fire_auth_guard__WEBPACK_IMPORTED_MODULE_8__["redirectUnauthorizedTo"])(['']);
+const redirectLoggedInToMain = Object(_angular_fire_auth_guard__WEBPACK_IMPORTED_MODULE_8__["redirectLoggedInTo"])(['']);
 const routes = [
     { path: '', component: _mainpage_mainpage_component__WEBPACK_IMPORTED_MODULE_3__["MainpageComponent"] },
-    Object.assign({ path: 'loginrequired', component: _loginrequiredpage_loginrequiredpage_component__WEBPACK_IMPORTED_MODULE_4__["LoginrequiredpageComponent"] }, Object(_angular_fire_auth_guard__WEBPACK_IMPORTED_MODULE_7__["canActivate"])(redirectUnauthorizedToMain)),
-    Object.assign({ path: 'login', component: _loginpage_loginpage_component__WEBPACK_IMPORTED_MODULE_5__["LoginpageComponent"] }, Object(_angular_fire_auth_guard__WEBPACK_IMPORTED_MODULE_7__["canActivate"])(redirectLoggedInToMain)),
-    Object.assign({ path: 'register', component: _registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_6__["RegisterpageComponent"] }, Object(_angular_fire_auth_guard__WEBPACK_IMPORTED_MODULE_7__["canActivate"])(redirectLoggedInToMain))
+    Object.assign({ path: 'loginrequired', component: _loginrequiredpage_loginrequiredpage_component__WEBPACK_IMPORTED_MODULE_4__["LoginrequiredpageComponent"] }, Object(_angular_fire_auth_guard__WEBPACK_IMPORTED_MODULE_8__["canActivate"])(redirectUnauthorizedToMain)),
+    Object.assign({ path: 'login', component: _loginpage_loginpage_component__WEBPACK_IMPORTED_MODULE_5__["LoginpageComponent"] }, Object(_angular_fire_auth_guard__WEBPACK_IMPORTED_MODULE_8__["canActivate"])(redirectLoggedInToMain)),
+    Object.assign({ path: 'register', component: _registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_6__["RegisterpageComponent"] }, Object(_angular_fire_auth_guard__WEBPACK_IMPORTED_MODULE_8__["canActivate"])(redirectLoggedInToMain)),
+    Object.assign({ path: 'addmakale', component: _addmakalepage_addmakalepage_component__WEBPACK_IMPORTED_MODULE_7__["AddmakalepageComponent"] }, Object(_angular_fire_auth_guard__WEBPACK_IMPORTED_MODULE_8__["canActivate"])(redirectUnauthorizedToMain))
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -193,16 +282,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/es2015/index.js");
-/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/es2015/index.js");
-/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/es2015/index.js");
-/* harmony import */ var _angular_fire_auth_guard__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/fire/auth-guard */ "./node_modules/@angular/fire/auth-guard/es2015/index.js");
-/* harmony import */ var _mainpage_mainpage_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./mainpage/mainpage.component */ "./src/app/mainpage/mainpage.component.ts");
-/* harmony import */ var _loginrequiredpage_loginrequiredpage_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./loginrequiredpage/loginrequiredpage.component */ "./src/app/loginrequiredpage/loginrequiredpage.component.ts");
-/* harmony import */ var _loginpage_loginpage_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./loginpage/loginpage.component */ "./src/app/loginpage/loginpage.component.ts");
-/* harmony import */ var _registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./registerpage/registerpage.component */ "./src/app/registerpage/registerpage.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
+/* harmony import */ var _angularmaterialcomponents_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./angularmaterialcomponents.module */ "./src/app/angularmaterialcomponents.module.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/es2015/index.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/es2015/index.js");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/es2015/index.js");
+/* harmony import */ var _angular_fire_auth_guard__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/fire/auth-guard */ "./node_modules/@angular/fire/auth-guard/es2015/index.js");
+/* harmony import */ var _mainpage_mainpage_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./mainpage/mainpage.component */ "./src/app/mainpage/mainpage.component.ts");
+/* harmony import */ var _loginrequiredpage_loginrequiredpage_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./loginrequiredpage/loginrequiredpage.component */ "./src/app/loginrequiredpage/loginrequiredpage.component.ts");
+/* harmony import */ var _loginpage_loginpage_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./loginpage/loginpage.component */ "./src/app/loginpage/loginpage.component.ts");
+/* harmony import */ var _registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./registerpage/registerpage.component */ "./src/app/registerpage/registerpage.component.ts");
+/* harmony import */ var _addmakalepage_addmakalepage_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./addmakalepage/addmakalepage.component */ "./src/app/addmakalepage/addmakalepage.component.ts");
+
+
+
 
 
 
@@ -231,24 +326,27 @@ let AppModule = class AppModule {
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-            _mainpage_mainpage_component__WEBPACK_IMPORTED_MODULE_10__["MainpageComponent"],
-            _loginrequiredpage_loginrequiredpage_component__WEBPACK_IMPORTED_MODULE_11__["LoginrequiredpageComponent"],
-            _loginpage_loginpage_component__WEBPACK_IMPORTED_MODULE_12__["LoginpageComponent"],
-            _registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_13__["RegisterpageComponent"]
+            _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
+            _mainpage_mainpage_component__WEBPACK_IMPORTED_MODULE_12__["MainpageComponent"],
+            _loginrequiredpage_loginrequiredpage_component__WEBPACK_IMPORTED_MODULE_13__["LoginrequiredpageComponent"],
+            _loginpage_loginpage_component__WEBPACK_IMPORTED_MODULE_14__["LoginpageComponent"],
+            _registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_15__["RegisterpageComponent"],
+            _addmakalepage_addmakalepage_component__WEBPACK_IMPORTED_MODULE_16__["AddmakalepageComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"].withServerTransition({ appId: 'serverApp' }),
             _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
-            _angular_fire__WEBPACK_IMPORTED_MODULE_6__["AngularFireModule"].initializeApp(firebaseConfig),
-            _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_7__["AngularFirestoreModule"],
-            _angular_fire_auth__WEBPACK_IMPORTED_MODULE_8__["AngularFireAuthModule"]
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
+            _angular_fire__WEBPACK_IMPORTED_MODULE_8__["AngularFireModule"].initializeApp(firebaseConfig),
+            _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_9__["AngularFirestoreModule"],
+            _angular_fire_auth__WEBPACK_IMPORTED_MODULE_10__["AngularFireAuthModule"],
+            _angularmaterialcomponents_module__WEBPACK_IMPORTED_MODULE_5__["AngularMaterialComponentsModule"]
         ],
         providers: [
-            _angular_fire_auth_guard__WEBPACK_IMPORTED_MODULE_9__["AngularFireAuthGuard"]
+            _angular_fire_auth_guard__WEBPACK_IMPORTED_MODULE_11__["AngularFireAuthGuard"]
         ],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
     })
 ], AppModule);
 

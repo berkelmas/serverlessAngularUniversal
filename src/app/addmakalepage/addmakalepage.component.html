@@ -1,0 +1,36 @@
+<br>
+<div class="container">
+  <h1>Makale Ekle</h1>
+  <form style="display: flex; flex-direction: column;" (submit)="handleMakaleSubmit(addMakaleForm)" #addMakaleForm="ngForm">
+
+    <mat-form-field>
+      <input ngModel name="makale_baslik" matInput placeholder="Makale Başlığı">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input ngModel name="makale_yayintarihi" matInput [matDatepicker]="picker" placeholder="Makale Tarihi">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <ckeditor ngModel name="makale_mesaj" [editor]="Editor" data="<p>Makale İçeriğinizi Girin...</p>"></ckeditor>
+
+    <mat-form-field>
+      <mat-label>Makale Kategorisi</mat-label>
+      <select ngModel name="makale_kategori" matNativeControl>
+        <option value="ishukuku">İş Hukuku</option>
+        <option value="cezahukuku">Ceza Hukuku</option>
+        <option value="gayrimenkulhukuku">Gayrimenkul Hukuku</option>
+        <option value="ticarethukuku">Ticaret Hukuku</option>
+      </select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input ngModel name="makale_meta_description" matInput placeholder="Makale Meta Açıklaması">
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="primary">Makale Ekle</button>
+    <mat-card *ngIf="sentSuccess" style="text-align: center;">Makale Başarı İle Kaydedildi.</mat-card>
+    <mat-card *ngIf="sentFailed" style="text-align: center;">Makale Kaydı Başarısız</mat-card>
+  </form>
+</div>
